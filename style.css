@@ -4,7 +4,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     flex-flow: column;
-    
 }
 
 .box {
@@ -15,8 +14,10 @@ body {
     height: 500px;
     margin: 0;
     padding: 0;
-    border: 5px solid black;
+    border: 5px solid #bab5a1;
     background-color: white;
+    box-sizing: border-box;
+
 }
 
 
@@ -25,10 +26,9 @@ body {
 }
 
 .cell {
-    display: flex;
-    width: 100%;
-    flex-basis: 2%;
-    padding: 10px;
-    background-color: aquamarine;
-    border: 2px solid lightgray;
+    width: calc(100% / var(--grid-size)); /* Set width for each cell dynamically */
+    height: calc(100% / var(--grid-size)); /* Maintain aspect ratio (square cells) */
+    background-color: #dcd8c0;
+    border: 1px solid #bab5a1; /* Border for each cell */
+    box-sizing: border-box; /* Include padding in cell size */
 }
